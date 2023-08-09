@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reverse an array</title>
+  </head>
+  <body>
+    <!-- 2.Reverse an array -->
+
+    <script>
+      function reverseArray(arr) {
+        const reversedArray = []; // Create an empty array to store the reversed elements
+
+        for (let i = arr.length - 1; i >= 0; i--) {
+          // Loop through the original array in reverse order
+          reversedArray.push(arr[i]); 
+        }
+
+        return reversedArray;
+      }
+
+      // Declaring a array to reverse
+      const originalArray = [1, 2, 3, 4, 5, 6];
+      console.log("Original Array:", originalArray);
+
+      const reversedArray = reverseArray(originalArray);
+      console.log("Reversed Array:", reversedArray);
+    </script>
+  </body>
+</html>

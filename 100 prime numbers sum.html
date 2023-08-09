@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of 100 prime numbers</title>
+  </head>
+  <body>
+    <!-- 8.Calculate the sum of first 100 prime numbers -->
+    <script>
+      function isPrime(number) {
+        if (number <= 1) {
+          return false; // Numbers less than or equal to 1 are not prime
+        }
+
+        // Check for divisibility from 2 to the square root of the number
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            return false; 
+          }
+        }
+
+        return true; // Number is prime
+      }
+
+      function sumOfFirstNPrimes(n) {
+        let sum = 0;
+        let count = 0;
+        let number = 2;
+
+        while (count < n) {
+          if (isPrime(number)) {
+            sum += number;
+            count++;
+          }
+          number++;
+        }
+
+        return sum;
+      }
+
+      // Calculate the sum of the first 100 prime numbers
+      const numberOfPrimes = 100;
+      const sumOfPrimes = sumOfFirstNPrimes(numberOfPrimes);
+      console.log(
+        "Sum of the first",
+        numberOfPrimes,
+        "prime numbers:",
+        sumOfPrimes
+      );
+    </script>
+  </body>
+</html>

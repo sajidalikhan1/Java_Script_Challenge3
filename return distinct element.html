@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distinct element</title>
+</head>
+<body>
+    <!-- 7.Create a function that will receive an array of numbers as argument and will return a new array with distinct elements -->
+    <script>
+        function distinctElement(arr){
+            const distinctArray = [];
+
+            for(let element of array){
+                if(!distinctArray.includes(element)){
+                    distinctArray.push(element);
+                }
+            }
+            return distinctArray;
+        }
+        let array = [1,2,3,4,,5,6,8,9,1,2,4,5,6,7,3,8];
+
+        const result = distinctElement(array);
+        console.log("Distinct Element :",result);
+    </script>
+</body>
+</html>

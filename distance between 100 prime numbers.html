@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 prime distance</title>
+  </head>
+  <body>
+    <!-- 9.Print the distance between the first 100 prime numbers -->
+    <script>
+      function isPrime(number) {
+        if (number <= 1) {
+          return false; 
+        }
+
+        // Check for divisibility from 2 to the square root of the number
+        for (let i = 2; i <= Math.sqrt(number); i++) {
+          if (number % i === 0) {
+            return false; 
+          }
+        }
+
+        return true; // Number is prime
+      }
+
+      function findPrimes(count) {
+        const primes = [];
+        let number = 2;
+
+        while (primes.length < count) {
+          if (isPrime(number)) {
+            primes.push(number);
+          }
+          number++;
+        }
+
+        return primes;
+      }
+
+      function calculateDistances(primes) {
+        const distances = [];
+
+        for (let i = 0; i < primes.length - 1; i++) {
+          distances.push(primes[i + 1] - primes[i]);
+        }
+
+        return distances;
+      }
+
+      // Find the first 100 prime numbers
+      const numberOfPrimes = 100;
+      const primeNumbers = findPrimes(numberOfPrimes);
+
+      // Calculate the distances between the prime numbers
+      const distances = calculateDistances(primeNumbers);
+
+      // Print the distances
+      console.log("Distances between the first 100 prime numbers:", distances);
+    </script>
+  </body>
+</html>

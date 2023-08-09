@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>merge two arrays</title>
+  </head>
+  <body>
+    <!-- 4.Create a function that will merge two arrays and return the result as a new array
+ -->
+    <script>
+      function mergeArrays(arr1, arr2) {
+        const mergedArray = arr1.concat(arr2); 
+
+        return mergedArray; // Return the merged array
+      }
+
+      const array1 = [1, 2, 3, 4];
+      const array2 = [5, 6, 7, 8];
+    //   console.log("Array 1:", array1);
+    //   console.log("Array 2:", array2);
+
+      const Result = mergeArrays(array1, array2);
+      console.log("Merged Array:", Result); // printing in single array
+    </script>
+  </body>
+</html>

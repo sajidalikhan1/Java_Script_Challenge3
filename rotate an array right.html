@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rotate an array</title>
+  </head>
+  <body>
+    <!-- 1. Rotate an array to right 1 position -->
+    <script>
+      function rotateArrayRightOne(arr) {
+        // Check if the array is empty or has only one element
+        if (arr.length <= 2) {
+          return arr;
+        }
+
+        const lastElement = arr.pop();
+
+        // Insert the last element at the beginning of the array
+        arr.unshift(lastElement);
+
+        return arr;
+      }
+
+      // declaring to rotate
+      const beforeRotate = [1, 2, 3, 4, 5, 6];
+      console.log("Original Array:", beforeRotate);
+
+      const rotatedArray = rotateArrayRightOne(beforeRotate);
+      console.log("Rotated Array:", rotatedArray);
+    </script>
+  </body>
+</html>

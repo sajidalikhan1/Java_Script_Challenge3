@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two positive numbers</title>
+  </head>
+  <body>
+    <!-- 10.Create a function that will add two positive numbers of indefinite size. The numbers are received as strings and the result should be also provided as string.
+ -->
+    <script>
+      function sumOfIndifiniteSizeNums(num1, num2) {
+        // Converting input strings to BigInt
+        let bigIntNum1 = BigInt(num1);
+        let bigIntNum2 = BigInt(num2);
+
+        // Perform the addition using BigInt
+        let sum = bigIntNum1 + bigIntNum2;
+        // Converting back to String
+        let sumString = sum.toString();
+        return sumString;
+      }
+
+      let number1 = "12345678901234567890";
+      let number2 = "98765432109876543210";
+      // Calling function to calculate string of indefinite size
+      let sum = sumOfIndifiniteSizeNums(number1, number2);
+      console.log(sum);
+    </script>
+  </body>
+</html>
